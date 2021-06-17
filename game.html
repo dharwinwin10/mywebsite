@@ -1,0 +1,71 @@
+<html>
+
+<head>
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="home.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script type="text/javascript">
+    var magicNumber = Math.floor(Math.random() * 10) + 1 ;
+    var arr = [
+    "<i class='fa fa-coffee'></i>", 
+    "<i class='fa fa-car'></i>",
+    "<i class='fa fa-cloud'></i>",
+    "<i class='fa fa-file'></i>",
+    "<i class='fa fa-bars'></i>",
+    "<i class='fa fa-anchor'></i>",
+    "<i class='fa fa-bell'></i>",
+    "<i class='fa fa-heart'></i>",
+    "<i class='fa fa-ambulance'></i>",
+    "<i class='fa fa-cut'></i>"
+    ];
+        function printMessage()
+        {
+            
+            for(var i=1;i<=100;i++)
+            {
+                var rnd = Math.floor(Math.random() * 10) + 1;
+                if(i%9==0) rnd = magicNumber;
+                $("#list").append("<span class='item'>"+i+" "+ arr[rnd-1]  +"  </span>");
+            }
+        }
+        function showResult()
+        {
+            $("#list").html("<span class='item'>"+ arr[magicNumber-1]  +"  </span>");
+        }
+    </script>
+</head>
+<body>
+
+    <div class="jumbotron text-center">
+        <h1>Welcome to Dhrawin's website</h1>
+        <p>You can find my Latest update here</p>
+    </div>
+
+    <div class="container" >
+        <div class="fireworks-container">
+        <h1>Javascript sample</h1>
+        
+        <a href="https://www.zomato.com/nagercoil"><img src="https://www.google.com/maps/vt/data=vRDs5fejBWz2XnujgnTmkxTrLGLbLluN1VpymGl5ODY01ZyXdxBE-Bm6MwwPZSFjA5zjZaFcAvtVMpJD7qD0VZe4NSl4mIvOQ5b1xDICCIvHF0jmAD93Gy4sXG4-vzTD10lrCiT1cm3xF-V6pdGW017WKGNSMelvoMMjmwOFGj3_EaOS3aAQSXxUH84Fkyjs2oDd6kFAsxIRmj5095MhYkefPKhJ0ZcmliWatRAG8W-5KyHSn1lWvYUdzttzoc5of2BDOGT8lBR6-G0PlxYs7XW5lKXRQmjNA6HWgEHqbbxxML0OknpLUTpsM1hQDtXHTXq5"/>
+        </a>
+
+
+        <button  onclick="printMessage()">Start Magic </button>
+        <button  onclick="showResult()">Show Result</button>
+
+        <div id="list">
+            
+           
+        </div>
+    
+    
+
+
+</body>
+
+</html>
